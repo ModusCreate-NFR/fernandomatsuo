@@ -32,6 +32,9 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
+        queries: security-and-quality
+        # security-extended: queries from default, plus extra security queries with slightly lower precision and severity.
+        # security-and-quality: queries from default, security-extended, plus extra maintainability and reliability queries.
 
     - if: matrix.build-mode == 'manual'
       shell: bash
