@@ -1,13 +1,12 @@
 #include <iostream>
-#include <cstring>
 
-int main(int argc, char** argv) {
-    char buffer[10];
-    std::cout << "Hello World" << std::endl;
-    
-    if (argc > 1) {
-        strcpy(buffer, argv[1]);  // Potential buffer overflow if argv[1] is longer than 10 characters
+int main(int argc, char** argv){
+
+	int uninitializedVar;  // Uninitialized variable usage
+    if (uninitializedVar == 0) {  // Potential undefined behavior
+        std::cout << "Variable is zero" << std::endl;
     }
 
-    return 0;
+	std::cout << "Hello World" << std::endl;
+	return 0;
 }
