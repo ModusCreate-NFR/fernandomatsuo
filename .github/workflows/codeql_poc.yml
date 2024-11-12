@@ -42,7 +42,6 @@ jobs:
         cmake ..
         make
         ./hello_world
-        exit 1
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
