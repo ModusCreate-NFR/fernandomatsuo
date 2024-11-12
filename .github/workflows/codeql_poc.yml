@@ -38,9 +38,9 @@ jobs:
       run: |
         cd ./c_cpp_poc
         mkdir build
-        build  CMakeLists.txt  main.cpp
         cd build
         cmake ..
+        ./hello_world
         exit 1
 
     - name: Perform CodeQL Analysis
